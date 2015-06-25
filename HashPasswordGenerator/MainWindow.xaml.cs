@@ -33,6 +33,9 @@ namespace HashPasswordGenerator
 
             viewModel.HashPassword = hasher.HashPassword(viewModel.Password);
             hashPasswordTextBox.Focus();
+
+            if (viewModel.AutoCopy)
+                System.Windows.Clipboard.SetText(viewModel.HashPassword);
         }
 
         private void hashPasswordTextBox_GotFocus(object sender, RoutedEventArgs e)
