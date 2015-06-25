@@ -13,4 +13,5 @@
 
 # 動作環境 #
 
-* .NET Framework 4.5 以上
+* .NET Framework 4.5 以上  
+4.0でも動くかも (未確認)
