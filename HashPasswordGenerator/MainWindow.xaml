@@ -31,7 +31,7 @@
         <ViewModels:HashPasswordViewModel x:Name="viewModel" />
     </Window.DataContext>
     <Grid>
-        <TextBox x:Name="passwordTextBox" Height="23" Margin="85,22,10,0" TextWrapping="Wrap" Text="{Binding Path=Password, Mode=TwoWay}" VerticalAlignment="Top" />
+        <TextBox x:Name="passwordTextBox" Height="23" Margin="85,22,10,0" TextWrapping="Wrap" Text="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" KeyDown="passwordTextBox_KeyDown" />
         <Label Content="パスワード" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top"/>
         <Label Content="{Binding Value, ElementName=generateCountSlider}" HorizontalAlignment="Left" Margin="85,77,0,0" VerticalAlignment="Top"/>
         <Button x:Name="generationButton" Content="生成！" Margin="0,67,23,0" VerticalAlignment="Top" Click="generationButton_Click" IsEnabled="{Binding ElementName=passwordTextBox, Path=Text.Length, Converter={StaticResource IntBoolConverter}}" HorizontalAlignment="Right" Width="75"/>
