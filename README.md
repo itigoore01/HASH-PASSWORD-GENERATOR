@@ -10,3 +10,7 @@
 
 2. こうじゃ  
 ![window_after.PNG](https://bitbucket.org/repo/g4K6B7/images/4164627637-window_after.PNG)
+
+# 動作環境 #
+
+* .NET Framework 4.5 以上
