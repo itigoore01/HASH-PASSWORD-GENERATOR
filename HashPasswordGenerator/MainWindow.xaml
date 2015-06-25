@@ -36,5 +36,6 @@
         <Label Content="{Binding Value, ElementName=generateCountSlider}" HorizontalAlignment="Left" Margin="85,77,0,0" VerticalAlignment="Top"/>
         <Button x:Name="generationButton" Content="生成！" Margin="0,67,23,0" VerticalAlignment="Top" Click="generationButton_Click" IsEnabled="{Binding ElementName=passwordTextBox, Path=Text.Length, Converter={StaticResource IntBoolConverter}}" HorizontalAlignment="Right" Width="75"/>
         <TextBox x:Name="hashPasswordTextBox" Margin="10,140,10,10" TextWrapping="Wrap" Text="{Binding Path=HashPassword, Mode=OneWay}" IsReadOnly="True" VerticalContentAlignment="Bottom" GotFocus="hashPasswordTextBox_GotFocus" />
+        <CheckBox x:Name="autoCopyCheckBox" Content="自動的にクリップボードにコピーする" HorizontalAlignment="Left" Margin="25,73,0,0" VerticalAlignment="Top" IsChecked="{Binding Path=AutoCopy, Mode=TwoWay}" />
     </Grid>
 </controls:MetroWindow>

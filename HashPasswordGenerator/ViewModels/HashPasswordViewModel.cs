@@ -13,5 +13,12 @@ namespace HashPasswordGenerator.ViewModels
         public string Password { get; set; }
 
         public string HashPassword { get; set; }
+
+        public bool AutoCopy { get; set; }
+
+        public HashPasswordViewModel()
+        {
+            AutoCopy = true;
+        }
     }
 }
