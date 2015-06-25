@@ -29,6 +29,22 @@ namespace HashPasswordGenerator
 
         private void generationButton_Click(object sender, RoutedEventArgs e)
         {
+            generateHashPassword();
+        }
+
+        private void hashPasswordTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            hashPasswordTextBox.SelectAll();
+        }
+
+        private void passwordTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                generateHashPassword();
+        }
+
+        private void generateHashPassword()
+        {
             var hasher = new PasswordHasher();
 
             viewModel.HashPassword = hasher.HashPassword(viewModel.Password);
@@ -36,11 +52,6 @@ namespace HashPasswordGenerator
 
             if (viewModel.AutoCopy)
                 System.Windows.Clipboard.SetText(viewModel.HashPassword);
-        }
-
-        private void hashPasswordTextBox_GotFocus(object sender, RoutedEventArgs e)
-        {
-            hashPasswordTextBox.SelectAll();
         }
     }
 }
